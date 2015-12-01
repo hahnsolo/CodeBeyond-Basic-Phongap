@@ -1,0 +1,35 @@
+HELPFULL CMDS
+
+	npm install - g phonegap
+	npm install -g cordova
+	phonegap serve
+
+HelpFull HTML
+
+	<!-- Header navbar -->
+	<nav>
+		<div class="nav-wrapper" style="background:white; color:red;">
+			<a href=" # " class="brand-logo center" style="color:red; ">Merry Christmas</a>
+			<ul id=" nav-mobile " class="left hide-on-med-and-down ">
+			</ul>
+		</div>
+	</nav>
+
+
+	<!--  click me and sing song button thing -->
+	<center> <img id="clickMe" src="img/buttons.png" width="90%;" style="margin-top:20%;"></center>
+
+	<audio class="my_audio" preload="none">
+		<source src="audio/song.mp3" type="audio/mpeg">
+		<source src="audio/song.mp3" type="audio/ogg">
+	</audio>
+
+Helpfull JS
+			$("#clickMe").on("click", function () {
+
+			$(".my_audio").trigger('pause');
+			$(".my_audio").prop("currentTime", 0);
+			$(".my_audio").trigger('play');
+
+
+		});
